@@ -9,7 +9,14 @@ export const ValidateProps = {
   post: {
     content: { type: 'string', minLength: 1, maxLength: 280 },
   },
+  chat: {
+    model: { type: 'string', minLength: 1, maxLength: 280 },
+    prompt: { type: 'string', minLength: 1, maxLength: 32000 },
+  },
   comment: {
-    content: { type: 'string', minLength: 1, maxLength: 280 },
+    content: { type: 'string', minLength: 1, maxLength: 32000 },
+    from: { type: 'string', minLength: 1, maxLength: 280 },
+    chatId: { type: 'string', minLength: 1, maxLength: 280 },
+    model: { type: 'string', minLength: 1, maxLength: 280 },
   },
 };

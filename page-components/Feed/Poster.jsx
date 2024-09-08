@@ -28,7 +28,7 @@ const PosterInner = ({ user }) => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ content: contentRef.current.value }),
         });
-        toast.success('You have posted successfully');
+        toast.success('Отправлено!');
         contentRef.current.value = '';
         // refresh post lists
         mutate();
@@ -48,8 +48,8 @@ const PosterInner = ({ user }) => {
         <Input
           ref={contentRef}
           className={styles.input}
-          placeholder={`What's on your mind, ${user.name}?`}
-          ariaLabel={`What's on your mind, ${user.name}?`}
+          placeholder={`Ваше сообщение, ${user.name}?`}
+          ariaLabel={`Ваше сообщение, ${user.name}?`}
         />
         <Button type="success" loading={isLoading}>
           Post
@@ -66,7 +66,7 @@ const Poster = () => {
   return (
     <Wrapper>
       <div className={styles.root}>
-        <h3 className={styles.heading}>Share your thoughts</h3>
+        <h3 className={styles.heading}>Задайте свой вопрос</h3>
         {loading ? (
           <LoadingDots>Loading</LoadingDots>
         ) : data?.user ? (

@@ -33,6 +33,10 @@
   background-color: var(--accents-3);
 }
 
+.icon {
+  font-size: 1px;
+}
+
 /** Type **/
 
 .secondary {

@@ -1,6 +1,10 @@
 /* Inspired by Vercel design */
 @import 'node_modules/modern-normalize/modern-normalize.css';
-
+* {
+  --mdb-card-color: #000;
+  --mdb-card-cap-color: #000;
+  --mdb-light-rgb: #000;
+}
 :root {
   --background: #fff;
   --foreground: #000;
@@ -46,10 +50,328 @@
   --shadow-large: 0 0 0 1px var(--accents-2);
 }
 
+[data-theme='sunset'] {
+  --background: #fffbf4;
+  --foreground: #4b2e83;
+  --accents-1: #fff5e6;
+  --accents-2: #ffe4cc;
+  --accents-3: #ffd1b3;
+  --accents-4: #ffbe99;
+  --accents-5: #ffab80;
+  --accents-6: #ff9966;
+  --accents-7: #ff854d;
+  --accents-8: #ff7033;
+  --success-light: #ffcc80;
+  --success: #ffb74d;
+  --success-dark: #ff9800;
+  --error-light: #ff8a80;
+  --error: #ff5252;
+  --error-dark: #ff1744;
+  --secondary: var(--accents-6);
+  --header-background: rgba(255, 251, 244, 0.9);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.15);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='forest'] {
+  --background: #e8f5e9;
+  --foreground: #1b5e20;
+  --accents-1: #e0f2f1;
+  --accents-2: #b2dfdb;
+  --accents-3: #80cbc4;
+  --accents-4: #4db6ac;
+  --accents-5: #26a69a;
+  --accents-6: #009688;
+  --accents-7: #00796b;
+  --accents-8: #004d40;
+  --success-light: #66bb6a;
+  --success: #43a047;
+  --success-dark: #2e7d32;
+  --error-light: #ef9a9a;
+  --error: #e57373;
+  --error-dark: #d32f2f;
+  --secondary: var(--accents-6);
+  --header-background: rgba(232, 245, 233, 0.9);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.15);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='twilight'] {
+  --background: #1e1e30;
+  --foreground: #e0e0e0;
+  --accents-1: #2a2a40;
+  --accents-2: #3b3b50;
+  --accents-3: #4c4c60;
+  --accents-4: #5d5d70;
+  --accents-5: #6e6e80;
+  --accents-6: #7f7f90;
+  --accents-7: #9090a0;
+  --accents-8: #a1a1b0;
+  --success-light: #50bfff;
+  --success: #0099ff;
+  --success-dark: #0066cc;
+  --error-light: #ff7070;
+  --error: #ff3333;
+  --error-dark: #cc0000;
+  --secondary: #b0b0b0;
+  --header-background: rgba(30, 30, 48, 0.8);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.25);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='midnight'] {
+  --background: #121212;
+  --foreground: #d0d0d0;
+  --accents-1: #1a1a1a;
+  --accents-2: #2b2b2b;
+  --accents-3: #3c3c3c;
+  --accents-4: #4d4d4d;
+  --accents-5: #5e5e5e;
+  --accents-6: #6f6f6f;
+  --accents-7: #808080;
+  --accents-8: #919191;
+  --success-light: #4caf50;
+  --success: #388e3c;
+  --success-dark: #2e7d32;
+  --error-light: #e57373;
+  --error: #d32f2f;
+  --error-dark: #c62828;
+  --secondary: #9e9e9e;
+  --header-background: rgba(18, 18, 18, 0.8);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.25);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='bordeaux'] {
+  --background: #321919;
+  --foreground: #e0e0e0;
+  --accents-1: #3b1f1f;
+  --accents-2: #4a2626;
+  --accents-3: #593030;
+  --accents-4: #683b3b;
+  --accents-5: #774646;
+  --accents-6: #876051;
+  --accents-7: #977a5c;
+  --accents-8: #a79367;
+  --success-light: #cc9d6f;
+  --success: #b3865a;
+  --success-dark: #8c6a44;
+  --error-light: #b77a7a;
+  --error: #9e5050;
+  --error-dark: #7e3a3a;
+  --secondary: #774646;
+  --header-background: rgba(50, 25, 25, 0.8);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.25);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='coffee'] {
+  --background: #2e1c1a;
+  --foreground: #dcdcdc;
+  --accents-1: #3a2a28;
+  --accents-2: #4d3c3a;
+  --accents-3: #5e4d4a;
+  --accents-4: #6f5e5b;
+  --accents-5: #81706c;
+  --accents-6: #93827d;
+  --accents-7: #a5948e;
+  --accents-8: #b6a69f;
+  --success-light: #8dbb8b;
+  --success: #689f63;
+  --success-dark: #4a7b49;
+  --error-light: #d28080;
+  --error: #b74a4a;
+  --error-dark: #933333;
+  --secondary: #81706c;
+  --header-background: rgba(46, 28, 26, 0.8);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.25);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='ash'] {
+  --background: #2f2f2f;
+  --foreground: #e0e0e0;
+  --accents-1: #3a3a3a;
+  --accents-2: #4a4a4a;
+  --accents-3: #5a5a5a;
+  --accents-4: #6a6a6a;
+  --accents-5: #7a7a7a;
+  --accents-6: #8a8a8a;
+  --accents-7: #9a9a9a;
+  --accents-8: #aaaaaa;
+  --success-light: #8dbb8b;
+  --success: #689f63;
+  --success-dark: #4a7b49;
+  --error-light: #d28080;
+  --error: #b74a4a;
+  --error-dark: #933333;
+  --secondary: #7a7a7a;
+  --header-background: rgba(47, 47, 47, 0.8);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.25);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+[data-theme='ash-light'] {
+  --background: #f5f5f5;
+  --foreground: #2f2f2f;
+  --accents-1: #e0e0e0;
+  --accents-2: #cfcfcf;
+  --accents-3: #bfbfbf;
+  --accents-4: #afafaf;
+  --accents-5: #9f9f9f;
+  --accents-6: #8f8f8f;
+  --accents-7: #7f7f7f;
+  --accents-8: #6f6f6f;
+  --success-light: #a5d6a7;
+  --success: #81c784;
+  --success-dark: #4caf50;
+  --error-light: #ef9a9a;
+  --error: #e57373;
+  --error-dark: #f44336;
+  --secondary: #9f9f9f;
+  --header-background: rgba(245, 245, 245, 0.8);
+  --shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.15);
+
+  --link: var(--success);
+  --nav-height: 48px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accents-5) var(--accents-2);
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   color: var(--foreground);
   background-color: var(--background);
+}
+
+pre {
+  background-color: var(--accents-1);
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.MuiInputBase-root {
+  color: var(--accents-7);
+  transition: all 0.3s ease;
+  height: 2.5rem;
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--accents-3);
+}
+.MuiInputBase-root:hover > .MuiOutlinedInput-notchedOutline {
+  border-color: var(--accents-4);
+}
+.Mui-focused > .MuiOutlinedInput-notchedOutline {
+  border-color: var(--accents-5) !important;
+}
+
+.MuiSelect-icon {
+  color: var(--accents-3);
+  transition: all 0.3s ease;
+}
+
+.MuiInputBase-root:hover > .MuiSelect-icon {
+  color: var(--accents-4);
+}
+
+.Mui-focused > .MuiSelect-icon {
+  color: var(--accents-5);
+}
+
+.MuiPaper-root {
+  background-color: var(--accents-2);
+}
+
+.MuiMenuItem-root {
+  color: var(--accents-7) !important;
+}
+.MuiMenuItem-root:hover {
+  color: var(--accents-7);
+  background-color: var(--accents-3);
+}
+.MuiMenuItem-root.Mui-selected {
+  background-color: var(--accents-4);
+}
+.MuiMenuItem-root.Mui-selected:hover {
+  background-color: var(--accents-4);
+  cursor: unset;
+}
+
+.MuiFormHelperText-root {
+  color: var(--accents-6);
+}
+
+.MuiButtonBase-root {
+  color: var(--accents-8);
+  /* border-color: var(--accents-6); */
+  background-color: var(--accents-3);
+}
+
+.MuiButtonBase-root:hover {
+  color: var(--accents-7);
+  /* border-color: var(--accents-7); */
+  background-color: var(--accents-4);
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to bottom right,
+    rgba(252, 203, 144, 1),
+    rgba(213, 126, 235, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to bottom right,
+    rgba(252, 203, 144, 1),
+    rgba(213, 126, 235, 1)
+  );
+}
+
+.mask-custom {
+  background: rgba(24, 24, 16, 0.2);
+  border-radius: 2em;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 }

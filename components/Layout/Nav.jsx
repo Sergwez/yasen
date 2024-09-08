@@ -11,6 +11,7 @@ import Container from './Container';
 import styles from './Nav.module.css';
 import Spacer from './Spacer';
 import Wrapper from './Wrapper';
+import clsx from 'clsx';
 
 const UserMenu = ({ user, mutate }) => {
   const menuRef = useRef();
@@ -96,9 +97,27 @@ const UserMenu = ({ user, mutate }) => {
 
 const Nav = () => {
   const { data: { user } = {}, mutate } = useCurrentUser();
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleMouseMove = (event) => {
+    const { clientY } = event;
+    if (clientY < 10) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
-    <nav className={styles.nav}>
+    <nav className={clsx(styles.nav, isVisible ? styles.navVisible : '')}>
       <Wrapper className={styles.wrapper}>
         <Container
           className={styles.content}
@@ -106,7 +125,10 @@ const Nav = () => {
           justifyContent="space-between"
         >
           <Link href="/">
-            <a className={styles.logo}>Next.js MongoDB App</a>
+            <a className={styles.logo}>Yasen</a>
+          </Link>
+          <Link href="/chat">
+            <a className={styles.logo}>Chats</a>
           </Link>
           <Container>
             {user ? (

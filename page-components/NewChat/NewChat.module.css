@@ -1,0 +1,24 @@
+.root {
+  height: calc(100vh - var(--nav-height));
+}
+.wrapper {
+  width: 240px;
+  height: 240px;
+  margin: -60px 0 0 -60px;
+  left: 50%;
+  top: 50%;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--accents-1);
+  color: var(--foregraund);
+  transition: 0.3s;
+}
+
+.wrapper:hover {
+  background-color: var(--accents-2);
+}

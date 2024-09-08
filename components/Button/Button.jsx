@@ -13,6 +13,7 @@ export const Button = forwardRef(function Button(
     variant = 'invert',
     loading,
     disabled,
+    icon,
   },
   ref
 ) {
@@ -22,6 +23,7 @@ export const Button = forwardRef(function Button(
         styles.button,
         type && styles[type],
         size && styles[size],
+        icon && styles.icon,
         styles[variant],
         className
       )}

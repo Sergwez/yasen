@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Footer from './Footer';
 import styles from './Layout.module.css';
 import Nav from './Nav';
 
@@ -7,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Next.js MongoDB App</title>
+        <title>Yasen</title>
         <meta
           key="viewport"
           name="viewport"
@@ -29,7 +28,7 @@ const Layout = ({ children }) => {
       </Head>
       <Nav />
       <main className={styles.main}>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

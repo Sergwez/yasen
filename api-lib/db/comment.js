@@ -27,14 +27,15 @@ export async function findComments(db, postId, before, limit = 10) {
     .toArray();
 }
 
-export async function insertComment(db, postId, { content, creatorId }) {
+export async function insertComment(db, chatId, { content, creatorId, from }) {
   const comment = {
     content,
-    postId: new ObjectId(postId),
+    from,
+    chatId: new ObjectId(chatId),
     creatorId,
     createdAt: new Date(),
   };
-  const { insertedId } = await db.collection('comments').insertOne(comment);
+  const { insertedId } = await db.collection('messages').insertOne(comment);
   comment._id = insertedId;
   return comment;
 }

@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGODB_URI=mongodb://yasen:123123@localhost:27018/test
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: yasen-mongo
+    ports:
+      - '27018:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: yasen
+      MONGO_INITDB_ROOT_PASSWORD: 123123
+      MONGO_INITDB_DATABASE: test
+    volumes:
+      - mongo-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+
+  mongo-seed:
+    image: mongo:latest
+    container_name: yasen-mongo-seed
+    depends_on:
+      - mongo
+    volumes:
+      - ./backup:/backup
+    entrypoint: ["sh", "-c", "sleep 10 && mongorestore --host yasen-mongo --port 27017 --username yasen --password 123123 --authenticationDatabase admin /backup && touch /tmp/done && sleep 3600"]
+
+volumes:
+  mongo-data:

@@ -1,0 +1,69 @@
+.panelWrapper {
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  /* top: 3rem; */
+  left: -150%;
+  height: 100vh;
+  background-color: var(--background);
+  border-right: 1px solid var(--accents-2);
+  transition: left 0.5s ease;
+  z-index: 9;
+  position: absolute;
+  width: 0;
+  min-width: unset;
+}
+
+.panelButton {
+  position: absolute;
+  left: 0;
+}
+
+.panelClose {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.panelContent {
+  padding: 0 0 0 1rem;
+}
+
+.panel.open {
+  left: 0;
+  width: 420px;
+  max-width: 420px;
+}
+
+.innerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  background-color: var(--accents-2);
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.2s 0s background-color, 0.2s 0s opacity;
+  position: fixed;
+  opacity: 0.2;
+  z-index: 1;
+  margin-top: 1rem;
+}
+.innerButton:hover {
+  background-color: var(--accents-3);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .panel.open {
+    width: 33.33%;
+  }
+}

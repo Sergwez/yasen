@@ -1,0 +1,41 @@
+.messages {
+  overflow: hidden;
+  /* max-width: 720px; */
+  margin: 0 auto 4rem;
+}
+
+.chatList {
+  padding-bottom: 24px;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.openSideBar {
+  margin-left: 30%;
+}
+
+.wrap {
+  display: block;
+  margin-bottom: 21px;
+  text-decoration: none;
+}
+.wrapper {
+  overflow-x: auto;
+  max-height: calc(100vh - 172px);
+}
+
+.chat:hover {
+  background: var(--accents-1);
+  transition: ease 0.15s background;
+}
+
+.newChat {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.list {
+  padding-right: 1rem;
+}
